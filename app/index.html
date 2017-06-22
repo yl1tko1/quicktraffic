@@ -12,339 +12,132 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 	<meta property="og:image" content="path/to/image.jpg">
-	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
-	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/libs.css">
-	<!-- Chrome, Firefox OS and Opera -->
-	<meta name="theme-color" content="#000">
-	<!-- Windows Phone -->
-	<meta name="msapplication-navbutton-color" content="#000">
-	<!-- iOS Safari -->
-	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
-
-
-	<style>body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style>
+	
 
 </head>
 
 <body>
-	<header>
-		<div class="wrapper">
-
-			<div class="logo"><a href=""><img src="img/logo.png" alt=""></a></div>
-
+	
+	<header class="main-header">
+		<div class="container">
 			<nav>
-				<div class="nav">
-					<li><a href="">Главная</a></li>
-					<li><a href="">Услуги</a></li>
-					<li><a href="">Работы</a></li>
-					<li><a href="">О Нас</a></li>
-					<li><a href="">Контакты</a></li>
-				</div>			
-				<div class="btn_mnu">
-					<div class="btn_row"></div>
-					<div class="btn_row"></div>
-					<div class="btn_row"></div>
-				</div>
-				<div class="nav-mb">
-					<li><a href="">Главная</a></li>
-					<li><a href="">Услуги</a></li>
-					<li><a href="">Работы</a></li>
-					<li><a href="">О Нас</a></li>
-					<li><a href="">Контакты</a></li>
-				</div>	
+				<div class="logo"><img src="img/logo.png" alt=""></div>
+				
+					<ul class="main-nav">
+						<li><a href="#">Главная</a></li>
+						<li><a href="#">Услуги</a></li>
+						<li><a href="#">Блог</a></li> 
+						<li><a href="#">Контакты</a></li>
+					</ul>
+
 			</nav>
 
-			<div class="nav_contact">
-				<a href=""><img src="img/Phone.png" alt="" width="100%"></a>
-				<a href=""><img src="img/Viber.png" alt="" width="100%"></a>
+			<h1>Улучшите показатели сайта на <span>290%</span>, 
+			используя современные тенденции Web-разработки</h1>
+
+			<div class="main-contacts">
+				<p>Начните работать с нами и мы упакуем Ваш бизнес, по всем современным тенденциям</p>
+				<form action="header-form.php" method="post">
+					<input type="text">
+					<input type="text">
+					<input type="text">
+					<button class="btn" type="submit">Заказываю</button>
+				</form>
 			</div>
-
-			<div class="content-bg">
-				<h1>АВТОРСКИЙ Макияж <span>на Дому</span></h1>
-				<p class="descriptor">Каждая Половинка Прекрасного Пола Неповторима, Наш Подход Раскроет Вашу Красоту и Позволит Быть Королевой Любого Мероприяти</p>
-
-				<div class="col1">
-					<div class="left_bg_img">
-					<img src="img/avtorskiy-makeup-na-domy.jpg" alt=""></div>
-
-					<div class="right_button_move">
-						<div class="content_move">
-							<p>На какое мероприятие Вы хотите
-выглядеть безупречно?</p>
-							<a href="">Перейти к Выбору</a>
-						</div>
-					</div>
-				</div>
-			</div>
-
 		</div>
 	</header>
-	
-	<main>
-		<section class="promotion">
-			<div class="wrapper">
-				<div class="img_prom">
-				<img src="img/promotion.png" alt=""></div>
-				<div class="text_promotion">
-					<h2>Выпускной Макияж</h2>
-					<p>Закажите выпускной макияж для своей дочери и получите, легкий макияж в <br>
-					<span>ПОДАРОК</span><a href="">Заказать</a></p>
-				</div>
-				
+
+	<main class="container">
+		<h2>Как QuickTraffic работает</h2>
+		<p class="title-description">Quick Traffic создаст не просто площадку, а постоянный рост посетителей</p>
+
+		<div class="features clearfix">
+			<div class="features-item">
+				<img src="img/" alt="">
+				<b>Найдем ошибки на Вашем Сайте</b>
+				<p>Ошибки допущеные при разработке Вашего уже
+					существующего сайта, могут влиять на продажи и
+					посещаемость.
+				</p>
 			</div>
-		</section>
-
-		<section class="works">
-			<div class="wrapper">
-				<h2>Последние Работы <span>|| Mай</span></h2>
-				<div class="block_works">
-					<div class="my_works">
-						<div class="foto_works"><img src="img/job0.jpg" alt=""></div>
-						<div class="content_description">
-							<div class="fb"><a href=""><img src="img/Facebook.png" alt=""></a></div>
-							<div class="title">Дневной Макияж</div>
-							<div class="heart">
-								<div class="count">243</div>
-								<img src="img/Hearts.png" alt="">
-							</div>
-						</div>
-					</div>
-					<div class="my_works">
-						<div class="foto_works"><img src="img/job1.jpg" alt=""></div>
-						<div class="content_description">
-							<div class="fb"><a href=""><img src="img/Facebook.png" alt=""></a></div>
-							<div class="title">Дневной Макияж</div>
-							<div class="heart">
-								<div class="count">243</div>
-								<img src="img/Hearts.png" alt="">
-							</div>
-						</div>
-					</div>
-					<div class="my_works">
-						<div class="foto_works"><img src="img/job2.jpg" alt=""></div>
-						<div class="content_description">
-							<div class="fb"><a href=""><img src="img/Facebook.png" alt=""></a></div>
-							<div class="title">Дневной Макияж</div>
-							<div class="heart">
-								<div class="count">243</div>
-								<img src="img/Hearts.png" alt="">
-							</div>
-						</div>
-					</div>
-					<div class="my_works">
-						<div class="foto_works"><img src="img/job3.jpg" alt=""></div>
-						<div class="content_description">
-							<div class="fb"><a href=""><img src="img/Facebook.png" alt=""></a></div>
-							<div class="title">Дневной Макияж</div>
-							<div class="heart">
-								<div class="count">243</div>
-								<img src="img/Hearts.png" alt="">
-							</div>
-						</div>
-					</div>
-					<div class="my_works">
-						<div class="foto_works"><img src="img/job4.jpg" alt=""></div>
-						<div class="content_description">
-							<div class="fb"><a href=""><img src="img/Facebook.png" alt=""></a></div>
-							<div class="title">Дневной Макияж</div>
-							<div class="heart">
-								<div class="count">243</div>
-								<img src="img/Hearts.png" alt="">
-							</div>
-						</div>
-					</div>
-					<div class="my_works">
-						<div class="foto_works"><img src="img/job5.jpg" alt=""></div>
-						<div class="content_description">
-							<div class="fb"><a href=""><img src="img/Facebook.png" alt=""></a></div>
-							<div class="title">Дневной Макияж</div>
-							<div class="heart">
-								<div class="count">243</div>
-								<img src="img/Hearts.png" alt="">
-							</div>
-						</div>
-					</div>
-
-				</div>
+			<div class="features-item">
+				<img src="img/" alt="">
+				<b>Разрабатываем Эффективный Сайт</b>
+				<p>В 2017 году мало иметь какой-нибудь сайт, нужно
+					 учитывать желания и потребности клиента. 
+				</p>
 			</div>
-		</section>
-
-		<section class="uslugi">
-			<div class="wrapper">
-				<h2><span>MakeUp</span>Услуги</h2>
-				<div class="pink_line"></div>
-				<div class="block_uslugi">
-
-					<div class="uslugi_b">
-						<div class="title_block_uslugi">
-							<h3>Дневной</h3>
-							<div class="star">
-								<img src="img/star-y.png" alt="">
-								<img src="img/star-y.png" alt="">
-								<img src="img/star-y.png" alt="">
-								<img src="img/star-y.png" alt="">
-								<img src="img/star-y.png" alt="">
-							</div>
-						</div>
-						<div class="block_price_and_order">
-							<div class="price">250 <span>грн.</span></div>
-							<a href="" class="order">Заказать</a>
-						</div>
-					</div>
-
-					<div class="uslugi_b">
-						<div class="title_block_uslugi">
-							<h3>Голливудский</h3>
-							<div class="star">
-								<img src="img/star-y.png" alt="">
-								<img src="img/star-y.png" alt="">
-								<img src="img/star-y.png" alt="">
-								<img src="img/star-y.png" alt="">
-								<img src="img/star-y.png" alt="">
-							</div>
-						</div>
-						<div class="block_price_and_order">
-							<div class="price">250 <span>грн.</span></div>
-							<a href="" class="order">Заказать</a>
-						</div>
-					</div>
-
-					<div class="uslugi_b">
-						<div class="title_block_uslugi">
-							<h3>Smoke</h3>
-							<div class="star">
-								<img src="img/star-y.png" alt="">
-								<img src="img/star-y.png" alt="">
-								<img src="img/star-y.png" alt="">
-								<img src="img/star-y.png" alt="">
-								<img src="img/star-y.png" alt="">
-							</div>
-						</div>
-						<div class="block_price_and_order">
-							<div class="price">250 <span>грн.</span></div>
-							<a href="" class="order">Заказать</a>
-						</div>
-					</div>
-
-					<div class="uslugi_b">
-						<div class="title_block_uslugi">
-							<h3>Вечерний</h3>
-							<div class="star">
-								<img src="img/star-y.png" alt="">
-								<img src="img/star-y.png" alt="">
-								<img src="img/star-y.png" alt="">
-								<img src="img/star-y.png" alt="">
-								<img src="img/star-y.png" alt="">
-							</div>
-						</div>
-						<div class="block_price_and_order">
-							<div class="price">250 <span>грн.</span></div>
-							<a href="" class="order">Заказать</a>
-						</div>
-					</div>
-
-					<div class="uslugi_b">
-						<div class="title_block_uslugi">
-							<h3>Свадебный</h3>
-							<div class="star">
-								<img src="img/star-y.png" alt="">
-								<img src="img/star-y.png" alt="">
-								<img src="img/star-y.png" alt="">
-								<img src="img/star-y.png" alt="">
-								<img src="img/star-y.png" alt="">
-							</div>
-						</div>
-						<div class="block_price_and_order">
-							<div class="price">250 <span>грн.</span></div>
-							<a href="" class="order">Заказать</a>
-						</div>
-					</div>
-
-					<div class="uslugi_b">
-						<div class="title_block_uslugi">
-							<h3>Омолаживающий</h3>
-							<div class="star">
-								<img src="img/star-y.png" alt="">
-								<img src="img/star-y.png" alt="">
-								<img src="img/star-y.png" alt="">
-								<img src="img/star-y.png" alt="">
-								<img src="img/star-y.png" alt="">
-							</div>
-						</div>
-						<div class="block_price_and_order">
-							<div class="price">250 <span>грн.</span></div>
-							<a href="" class="order">Заказать</a>
-						</div>
-					</div>
-				</div>
+			<div class="features-item">
+				<img src="img/" alt="">
+				<b>Доведем Ваш ресурс до результата</b>
+				<p>Каждый шаг в работе над Вашим бизнесом важен.
+					 Поэтому мы не просто создаем сайт, а помогаем в
+					 росте траффика на ресурс.
+				</p>
 			</div>
-		</section>
+		</div>
 
-		<section class="how_we_work">
-			<div class="wrapper">
-				<h2>Как Мы Работаем</h2>
-				
-				<div class="we_work_block">
-					<div class="four_block">
-						<span>1</span>
-						<p>Вы оставляете заявку 
-или связываетесь с нами</p>
-					</div>
-					<div class="four_block">
-						<span>2</span>
-						<p>Проводим консультацию</p>
-					</div>
-					<div class="four_block">
-						<span>3</span>
-						<p>Бронируем дату и время</p>
-					</div>
-					<div class="four_block">
-						<span>4</span>
-						<p>Выезд на дом в день 
-торжества</p>
-					</div>
-				</div>
+		<div class="silver-line"></div>
 
+		<p class="title-h2">Начните сотрудничать с Quick Traffic</p>
+
+		<div class="index-content clearfix">
+			<div class="index-content-left">
+				<p>Мы поможем Вам устранить недочеты и придадим стремительного роста, что 
+					позволить не только увелчить доход но и узнаваемость бренда. Вас ждет:
+				</p>
+
+				<ul class="index-content-features">
+					<li>
+						<b>Ответственный персонал</b>
+						<p>Каждый желает выполнять свои задачи легко и эффективно. Благодаря 
+							ответсвенному подходу вы получите массу удовольствия от работы с нами.
+						</p>
+					</li>
+					<li>
+						<b>Уведомления о важных изменениях</b>
+						<p>Современный маркетинг и WEB индустрия стремительно развиваются. Вы
+							всегда будете вкурсе этих изменений и сможете принять решение о 
+							внедрении их в свой бизнес.
+						</p>
+					</li>
+					<li>
+						<b>Рост. Обучение. Сопровождение</b>
+						<p>Пока мы занимаемся разработкой Вашего ресурса, вы сможете узнать что,
+ 							как и почему.
+ 						</p>
+					</li>
+				</ul>
 			</div>
-		</section>
-
-		<section class="abaut">
-			<div class="wrapper">
-				<h2>Обо мне</h2>
-
-				<img src="img/kalnaus-nataliya.jpg" alt="">
-
-				<div class="text-abaut">
-					<p class="name">Калнаус Наталия</p>
-					<span class="opisanie">Визажист</span>
-					<div class="pink_line_abaut"></div>
-					<p class="text-a">Я люблю свое дело, которым занимаюсь 2 года. Все это время прошло в вдохновении и прекрасных работах, которые повышают мой интерес к данной индустрии все больше и больше. Я стараюсь идти в ногу с прогрессом, поэтому уделяю много времени учебе у западных специалистов. Все это позволило делать для Вас не просто MakeUp, а пвращать Вас в уверенную в себе леди!</p>
-
-					<div class="contact_abaut">
-						<div class="tel">
-							<img src="img/Phone.png" alt="">
-							<span>+38-(050)-566-57-54</span>
-						</div>
-						<div class="inta">
-							<img src="img/Instagram.png" alt="">
-							<span>@natali_kalnaus</span>
-						</div>
-					</div>
-
-				</div>
+			<div class="index-content-right">
+			<img src="" alt="">
 			</div>
-		</section>
+		</div>
+
+		<h2>Добро пожаловать в сообщетсво QuickTraffic</h2>
+		<p class="title-description">Это лучшее решение, которое позволит заметить изминения в Вашем бизнесе всех, 
+				кроме Вашего кошелька!
+		</p>
+		<a class="btn" href="">Войти</a>
 	</main>
 
 	<footer>
-		<div class="wrapper">
-			<p>© MakeUpForHome. Все права защищены. Любое копирование материалов разрешено только с согласия правообладателей. По всем вопросам обращайтесь: </p>
+		<div class="container">
+			<div class="logo-footer">
+				<img src="img/logo-footer.png" alt="">
+			</div>
+			<nav class="nav-footer">
+				<ul>
+					<li><a href="#">Политика конфиденциальности</a></li>
+					<li><a href="#">Отказ от ответственности</a></li>
+					<li><a href="#"> Согласие с рассылкой</a></li>
+				</ul>
+			</nav>
 		</div>
 	</footer>
-	
+
 	<link rel="stylesheet" href="css/main.css">
 	<script src="js/libs.min.js"></script>
 	<script src="js/common.js"></script>
