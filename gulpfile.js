@@ -1,15 +1,19 @@
-var gulp        = require('gulp'),
-	sass        = require('gulp-sass'),
-	browserSync = require('browser-sync'),
-	concat      = require('gulp-concat'),
-	uglify      = require('gulp-uglifyjs'),
-	cssnano		= require('gulp-cssnano'),
-	rename 		= require('gulp-rename'),
-	del			= require('del'),
-	imagemin 	= require('gulp-imagemin'),
-	pngquant	= require('imagemin-pngquant'),
-	cache 		= require('gulp-cache'),
-	autoprefixer = require('gulp-autoprefixer');
+var gulp         = require('gulp'),
+		sass         = require('gulp-sass'),
+		browserSync  = require('browser-sync'),
+		concat       = require('gulp-concat'),
+		uglify       = require('gulp-uglifyjs'),
+		cssnano			 = require('gulp-cssnano'),
+		rename 			 = require('gulp-rename'),
+		del					 = require('del'),
+		imagemin 		 = require('gulp-imagemin'),
+		pngquant		 = require('imagemin-pngquant'),
+		cache 			 = require('gulp-cache'),
+		autoprefixer = require('gulp-autoprefixer');
+		gulp 				 = require('gulp');
+		gutil 			 = require('gulp-util');
+		ftp 				 = require('gulp-ftp');
+
 
 
 
@@ -24,8 +28,7 @@ gulp.task('sass', function(){
 gulp.task('scripts', function(){
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
-		'app/libs/jquery-zoom/jquery.zoom.min.js',
-		'app/libs/lazyload/lazyload.js'
+		'app/libs/OwlCarousel/dist/owl.carousel.min.js'
 		])
 	.pipe(concat('libs.min.js'))
 	.pipe(uglify())
@@ -34,7 +37,10 @@ gulp.task('scripts', function(){
 
 
 gulp.task('csslibs', ['sass'], function(){
-	return gulp.src('app/css/libs.css')
+	return gulp.src([
+		'app/css/libs.css',
+		'app/css/main.css'
+	])
 	.pipe(cssnano())
 	.pipe(rename({suffix: '.min'}))
 	.pipe(gulp.dest('app/css/'))
@@ -58,7 +64,7 @@ gulp.task('clear', function(){
 });
 
 gulp.task('img', function(){
-	return gulp.src('img/*')
+	return gulp.src('app/img/**')
 	.pipe(cache(imagemin({
 		interlaced: true,
 		progressive: true,
@@ -73,7 +79,7 @@ gulp.task('watch', ['browser-sync', 'csslibs', 'scripts'], function(){
 	gulp.watch('app/sass/*.sass', ['sass']);
 	gulp.watch('app/**/*.html', browserSync.reload)
 	gulp.watch('app/js/**/*.js', browserSync.reload)
-	gulp.watch('app/css/*.css', browserSync.reload)
+	gulp.watch('app/css/**.css', browserSync.reload)
 });
 
 
@@ -100,4 +106,18 @@ gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function(){
 		.pipe(gulp.dest('dist'));
 
 
+});
+
+gulp.task('ftpgo', function () {
+    return gulp.src('dist/**')
+        .pipe(ftp({
+            host: 'smiteway.ftp.ukraine.com.ua',
+            user: 'smiteway_1',
+            pass: 'jrO09Y82Jr',
+						remotePath: '/quicktraffic.ru/www/lp'
+        }))
+        // you need to have some kind of stream after gulp-ftp to make sure it's flushed
+        // this can be a gulp plugin, gulp.dest, or any kind of stream
+        // here we use a passthrough stream
+        .pipe(gutil.noop());
 });
